@@ -44,7 +44,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   }
 });
 
-// Upravený listener pre vytváranie nových tabov
+// Listener pre vytváranie nových tabov
 chrome.tabs.onCreated.addListener((tab) => {
   chrome.storage.local.get(["enabled"], (result) => {
     if (result.enabled !== false) {
@@ -54,9 +54,9 @@ chrome.tabs.onCreated.addListener((tab) => {
           isCurrentTabInActiveList
         );
 
-        // Zablokuj nový tab len ak sa pôvodný aktívny tab nachádzal v zozname activeUrls
+        // Zavri nový tab len ak sa pôvodný aktívny tab nachádzal v zozname activeUrls
         if (isCurrentTabInActiveList) {
-          console.log("Blocking new tab because current tab is in active list");
+          console.log("Closing new tab because current tab is in active list");
           chrome.tabs.remove(tab.id);
         }
       }

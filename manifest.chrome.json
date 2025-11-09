@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Auto Close Blocker",
-  "short_name": "Auto Blocker",
+  "name": "Auto Closer",
+  "short_name": "Auto Closer",
   "version": "1.0.0",
   "version_name": "1.0.0",
   "description": "Automatically closes unwanted new tabs on selected websites",
@@ -18,7 +18,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Toggle Tab Blocker",
+    "default_title": "Toggle Auto Close Tabs",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon_16.png",

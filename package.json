@@ -1,5 +1,5 @@
 {
-  "name": "auto-close-blocker",
+  "name": "auto-closer",
   "private": true,
   "version": "1.0.0",
   "description": "Build scripts for packaging Chrome and Firefox MV3 extension",
