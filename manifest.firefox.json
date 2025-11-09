@@ -3,10 +3,8 @@
   "name": "Auto Close Blocker",
   "short_name": "Auto Blocker",
   "version": "1.0.0",
-  "version_name": "1.0.0",
   "description": "Automatically closes unwanted new tabs on selected websites.",
   "homepage_url": "https://github.com/filip65/ad-popup-blocker",
-  "minimum_chrome_version": "88",
   "browser_specific_settings": {
     "gecko": {
       "id": "auto-close-blocker@filipkatusin.com",

@@ -1,0 +1,10 @@
+{
+  "name": "auto-close-blocker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build scripts for packaging Chrome and Firefox MV3 extension",
+  "scripts": {
+    "build": "node build.js",
+    "clean": "node build.js --clean"
+  }
+}
