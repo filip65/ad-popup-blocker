@@ -1,71 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      body {
-        font-family: sans-serif;
-        width: 300px;
-        padding: 10px;
-      }
-      label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 15px;
-      }
-      .section {
-        margin-bottom: 15px;
-      }
-      .url-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-        border: 1px solid #ddd;
-        margin-bottom: 5px;
-        border-radius: 3px;
-      }
-      .url-text {
-        flex: 1;
-        font-size: 12px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      button {
-        padding: 5px 10px;
-        margin-left: 5px;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-      .add-btn {
-        background-color: #4caf50;
-        color: white;
-      }
-      .remove-btn {
-        background-color: #f44336;
-        color: white;
-      }
-      .delete-btn {
-        background-color: #ff9800;
-        color: white;
-        font-size: 10px;
-        padding: 2px 6px;
-      }
-      #currentUrl {
-        font-size: 12px;
-        color: #666;
-        margin-bottom: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <div class="section">
-      <label>
-        <input type="checkbox" id="toggle" />
-        Auto-close tabs
-      </label>
+      <div class="top-row">
+        <label for="toggle" class="label-text">Enabled</label>
+        <input type="checkbox" id="toggle" class="switch" />
+      </div>
     </div>
 
     <div class="section">
@@ -74,7 +17,7 @@
     </div>
 
     <div class="section">
-      <strong>Active URLs:</strong>
+      <div class="section-title">Active URLs</div>
       <div id="urlList"></div>
     </div>
 

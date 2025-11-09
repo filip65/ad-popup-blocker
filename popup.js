@@ -56,7 +56,7 @@ function updateAddRemoveButton() {
   if (currentHost) {
     const isInList = activeUrls.includes(currentHost);
     addRemoveBtn.textContent = isInList ? "Remove" : "Add";
-    addRemoveBtn.className = isInList ? "remove-btn" : "add-btn";
+    addRemoveBtn.className = isInList ? "btn remove-btn" : "btn add-btn";
   }
 }
 
@@ -83,8 +83,18 @@ function renderUrlList() {
     urlText.textContent = url;
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.className = "delete-btn";
-    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "icon-btn delete-btn";
+    deleteBtn.setAttribute("title", "Remove");
+    deleteBtn.setAttribute("aria-label", "Remove");
+    deleteBtn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="3 6 5 6 21 6"></polyline>
+        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+        <path d="M10 11v6"></path>
+        <path d="M14 11v6"></path>
+        <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+      </svg>
+    `;
     deleteBtn.addEventListener("click", () => {
       activeUrls.splice(index, 1);
       chrome.storage.local.set({ activeUrls: activeUrls }, () => {
