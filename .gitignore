@@ -1,4 +1,4 @@
 # Build outputs
 dist-chrome/
 dist-firefox/
-
+*.zip
